@@ -1,15 +1,21 @@
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-  }
-  
-  *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
 
-  body {
-    display: flex;
-    flex-direction: column;
-  }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#searchButton img {
+  height: 50px;
+}
