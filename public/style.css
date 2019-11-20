@@ -1,3 +1,13 @@
+:root {
+  /* colour variables */
+  --green: #286334;
+  --orange: #F7C10E;
+  --shamrock: #5FAD56;
+  --cadet: #3F3F3F;
+  --earth: #5E3023;
+  /* these can be changed! */
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
