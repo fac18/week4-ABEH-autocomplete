@@ -56,13 +56,7 @@ const chooseSuggestion = event => {
   changeValue();
 };
 
-//callback to handle navigation keypresses(arrow keys).
-//updates navCounter and calls addSuggestions function to rerender suggestions list.
-
 //40 is down
-
-//eventlistener for navigating search queries with keyboard
-input.addEventListener("keydown", navigateList);
 
 searchButton.addEventListener("click", () => {
   window.location.href = "https://en.wikipedia.org/wiki/" + input.value;
