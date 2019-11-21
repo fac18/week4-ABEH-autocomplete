@@ -22,3 +22,29 @@ test("Array length less than 6", t => {
   t.deepEqual(actual, expected, "Array should be less than 6");
   t.end();
 });
+
+test("Array filters input to match", t => {
+  let actual = search("Marsh")
+  let expected = ['Marsh harrier',
+  'Marsh tit',
+  'Marsh warbler'];
+  t.deepEqual(actual, expected, "Array should filter out up to 5 matches");
+  t.end();
+});
+
+test("Array returns match of second part of array terms", t => {
+  let actual = search("Wils")
+  let expected = ['Callum Wilson',
+  'Harry Wilson',
+  'Jack Wilshere']
+  t.deepEqual(actual, expected, "Array should return the footballer's surname inc Wils");
+  t.end();
+});
+
+test("Array returns matches from beginning and middle of terms", t => {
+  let actual = search("grass")
+  let expected = ['Grasshopper warbler','Robert Snodgrass'
+  ]
+  t.deepEqual(actual, expected, "Array should return the footballer and bird inc grass");
+  t.end();
+});
