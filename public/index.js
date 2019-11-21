@@ -13,6 +13,7 @@ const changeValue = () => {
     xhr.onreadystatechange = () => {
       if (xhr.readyState == 4 && xhr.status == 200) {
         newArr = JSON.parse(xhr.responseText);
+        console.log({newArr});
         addSuggestions();
       }
     };
@@ -24,9 +25,10 @@ input.addEventListener('input', changeValue);
 
 //create li elements for each suggestion
 const addSuggestions = () => {
-    const UlElement = document.querySelector(".suggestions-box");
+    const UlElement = document.querySelector(".dropdownList");
+    console.log({UlElement});
     UlElement.innerHTML = "";
-    newArry.forEach((suggestion, i) => {
+    newArr.forEach((suggestion, i) => {
       const liElement = document.createElement("li");
       liElement.classList.add("suggestion-item");
       const matchingText = document.createElement("span");
