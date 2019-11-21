@@ -10,18 +10,12 @@
   --cadet-opaque: #3F3F3F40;
   --earth: #5E3023;
   --earth-opaque: #5E302340;
-  /* these can be changed! */
 }
 
 *,
 *::before,
 *::after {
-  /* position: relative; */
-  /* margin: 0;
-  padding: 0; */
   box-sizing: inherit;
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
 }
 
 html {
@@ -29,20 +23,16 @@ html {
   box-sizing: border-box;
   color: var(--orange);
   text-align: center;
-  /* margin: 5%; */
 }
 
 body {
   display: flex;
-    flex-direction: column;
-    /* align-items: space-between; */
+  flex-direction: column;
   background-color: var(--green);
   font-family: 'Play', sans-serif;
 }
 
 .textContainer {
-  /* flex-direction: column;
-  justify-content: space-between; */
   margin: 50px 200px;
 }
 
@@ -51,7 +41,6 @@ body {
   padding: 10px;
   font-size: 90%;
   flex: 3;
-  /* flex-wrap: nowrap; */
 }
 
 #searchButton img {
@@ -63,42 +52,34 @@ body {
 }
 
 #searchButton img:hover {
-
-    transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .searchContainer {
   display: flex;
   flex-direction: row;
-  /* position: fixed;
-top: 40%; */
 }
 
 .topBirds {
-  /* position: fixed;
-  top: 0; */
   flex-direction: row;
   display: flex;
   justify-content: space-between;
   margin-top: 2%;
   align-items: flex-start;
-  /* margin-top: -60px; */
 }
+
 .bottomBirds {
-  /* position: fixed;
-  bottom: 0; */
   flex-direction: row;
   display: flex;
   justify-content: space-between;
-  /* margin-bottom:  -60px; */
   margin-bottom: 2%;
   align-items: flex-end;
 }
 
 .dove {
-  /* display: flex; */
   height: 170px;
 }
+
 .humming {
   height: 170px;
 }
