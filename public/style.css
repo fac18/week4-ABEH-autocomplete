@@ -34,11 +34,12 @@ body {
 
 .textContainer {
   margin: 50px 200px;
+
 }
 
 #userInput {
-  margin: 0 5% 0 0;
-  padding: 5px;
+  margin: 2% 5% 0 0;
+  padding: 8px;
   font-size: 90%;
   flex: 3;
   width: 500px;
@@ -53,6 +54,7 @@ body {
 }
 
 #searchButton img:hover {
+  cursor: pointer;
   transform: rotate(360deg);
 }
 
@@ -84,9 +86,13 @@ body {
 
 .dropdownList {
   list-style: none;
-  background-color: #ffffff;
   text-align: left;
   padding: 5px;
   margin: 0;
   width: 500px;
+  text: black;
+}
+
+li {
+  background-color: white;
 }
