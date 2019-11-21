@@ -23,9 +23,10 @@ const handlePublic = (request,response,endpoint) => {
         html:'text/html',
         css: 'text/css',
         js: 'application/javascript',
-        json : 'application/json'
+        json : 'application/json',
+        png: 'image/png'
     };
-    const filePath = path.join(__dirname, '..' , endpoint);
+    const filePath = path.join(__dirname, '..' , 'public', endpoint);
     fs.readFile(filePath, (error , file)=> {
        if(error){
         console.log(error);
