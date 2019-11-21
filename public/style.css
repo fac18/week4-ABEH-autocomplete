@@ -1,31 +1,92 @@
 :root {
   /* colour variables */
   --green: #286334;
+  --green-opaque: #2863380;
   --orange: #F7C10E;
+  --orange-opaque: #F7C10E40;
   --shamrock: #5FAD56;
+  --shamrock-opaque: #5FAD5666;
   --cadet: #3F3F3F;
+  --cadet-opaque: #3F3F3F40;
   --earth: #5E3023;
-  /* these can be changed! */
-}
-
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
+  --earth-opaque: #5E302340;
 }
 
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   box-sizing: inherit;
+}
+
+html {
+  font-size: 170%;
+  box-sizing: border-box;
+  color: var(--orange);
+  text-align: center;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  background-color: var(--green);
+  font-family: 'Play', sans-serif;
+}
+
+.textContainer {
+  margin: 50px 200px;
+}
+
+#userInput {
+  margin: 2% 5%;
+  padding: 10px;
+  font-size: 90%;
+  flex: 3;
 }
 
 #searchButton img {
-  height: 50px;
+  height: 60px;
+  opacity: 100%;
+  margin-top: 20px;
+  flex: 1;
+  transition: transform 0.3s;
+}
+
+#searchButton img:hover {
+  transform: rotate(360deg);
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.topBirds {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  align-items: flex-start;
+}
+
+.bottomBirds {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+  align-items: flex-end;
+}
+
+.dove {
+  height: 170px;
+}
+
+.humming {
+  height: 170px;
+}
+.goose {
+  height: 170px;
+}
+
+.raven {
+  height: 170px;
 }
