@@ -26,7 +26,7 @@ const handlePublic = (request,response,endpoint) => {
         json : 'application/json',
         png: 'image/png'
     };
-    const filePath = path.join(__dirname, '..' , 'public', endpoint);
+    const filePath = path.join(__dirname, '..' , endpoint);
     fs.readFile(filePath, (error , file)=> {
        if(error){
         console.log(error);
