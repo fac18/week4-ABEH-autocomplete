@@ -50,10 +50,13 @@ body {
   margin-top: 20px;
   flex: 1;
   transition: transform 0.3s;
+  border: 2px solid #c89b08;
+  border-radius: 10%;
 }
 
 #searchButton img:hover {
   transform: rotate(360deg);
+  cursor: pointer;
 }
 
 .searchContainer {
@@ -89,4 +92,9 @@ body {
   padding: 5px;
   margin: 0;
   width: 500px;
+}
+
+li:hover {
+  background-color: var(--orange);
+  color: white;
 }

@@ -56,36 +56,15 @@ const chooseSuggestion = event => {
   changeValue();
 };
 
-//callback to handle navigation keypresses(arrow keys).
-//updates navCounter and calls addSuggestions function to rerender suggestions list.
-const navigateList = e => {
-  if (e.keyCode == 40 && navCounter < newArry.length - 1) {
-    //increments navCounter
-    navCounter += 1;
-    //preventing default behavior of up arrow which is to move the cursor around in the textbox(which still has focus)
-    e.preventDefault();
-    addSuggestions();
-  }
-  if (e.keyCode == 38 && navCounter > -1) {
-    //decrements navCounter
-    navCounter -= 1;
-    //again preventing default behavior of moving the cursor in the textbox
-    e.preventDefault();
-    addSuggestions();
-  }
-  if (e.keyCode == 13 && navCounter !== -1) {
-    //hacking the chooseSuggestion function, instead of using it as an event listener callback,
-    //we are just passing it an object with a property 'target', which has a value of the highlighted element.
-    //e.target within chooseSuggestion is the currently highlighted element
-    //so the function updates the input with the currently highlighted suggestion's value
-    chooseSuggestion({ currentTarget: document.querySelector(".highlighted") });
-    //resets navCounter to 1
-    navCounter = -1;
-  }
-};
-//eventlistener for navigating search queries with keyboard
-input.addEventListener("keydown", navigateList);
+//40 is down
 
 searchButton.addEventListener("click", () => {
   window.location.href = "https://en.wikipedia.org/wiki/" + input.value;
+});
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    searchButton.click();
+  }
 });
