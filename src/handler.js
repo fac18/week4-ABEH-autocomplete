@@ -24,18 +24,19 @@ const handlePublic = (request,response,endpoint) => {
         css: 'text/css',
         js: 'application/javascript',
         json : 'application/json',
-        png: 'image/png'
+        png: 'image/png',
+        svg: 'image/svg+xml'
     };
     const filePath = path.join(__dirname, '..' , endpoint);
     fs.readFile(filePath, (error , file)=> {
        if(error){
         console.log(error);
         response.writeHead(404, {'Content-type': 'text/html'});
-        response.end("<h1> Sorry we've had a problem");  
+        response.end("<h1> Sorry we've had a problem");
        } else{
            response.writeHead(200,{'Content-type': extensionType[extension]});
            response.end(file);
-       }  
+       }
     });
     console.log(endpoint);
 
@@ -51,6 +52,6 @@ const handleSearch = (request, response, endpoint) => {
 }
 
 
-  
+
 
 module.exports = {handlePublic,handleHome,handleSearch};
