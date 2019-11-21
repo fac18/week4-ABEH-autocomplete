@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-
+const querystring = require("querystring");
+const search = require("./search");
 
 const handleHome = (request, response) => {
     const filePath = path.join(__dirname, '..', 'public', 'index.html');
@@ -39,7 +40,16 @@ const handlePublic = (request,response,endpoint) => {
 
 }
 
+const handleSearch = (request, response, endpoint) => {
+    let urlObject = url.parse(endpoint);
+    let queryObject = querystring.parse(urlObject.query);
+    let searchTerm = queryObject.q;
+    let result = search(searchTerm);
+    response.writeHead(200, { 'Content-type': 'application/json' });
+    response.end(JSON.stringify(result));
+}
+
 
   
 
-module.exports = {handlePublic,handleHome};
+module.exports = {handlePublic,handleHome,handleSearch};
