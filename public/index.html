@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link href="public/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="public/img/football.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Play&display=swap"
+      rel="stylesheet"
+    />
+    <title>Footballers and their Birds</title>
+  </head>
 
-<head>
-  <link href="public/style.css" rel="stylesheet" type="text/css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="shortcut icon" type="image/png" href="public/img/football.png" />
-  <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
-  <title>Footballers and their Birds</title>
-</head>
+  <body>
+    <section class="topBirds">
+      <object data="public/img/dove.svg" type="image/svg+xml" class="bird">
+      </object>
+      <object data="public/img/hummingbird.svg" type="image/svg+xml" class="bird">
+      </object>
+    </section>
 
-<body>
+    <section class="textContainer">
+      <h1>Footballers and their Birds</h1>
+      <div class="searchContainer">
+        <input id="userInput" type="text" name="search-bar" required />
+        <a id="searchButton">
+          <img src="public/img/binoculars-512.png" alt="Click to search" name="submit"/></a>
+      </div>
+      <div>
+      <ul class="dropdownList"></ul>
+      </div>
+    </section>
 
-  <section class="topBirds">
-    <object data="public/img/dove.svg" type="image/svg+xml" class="dove">
-    </object>
-    <object data="public/img/hummingbird.svg" type="image/svg+xml" class="humming">
-    </object>
-  </section>
+    <section class="bottomBirds">
+      <object data="public/img/raven.svg" type="image/svg+xml" class="bird">
+      </object>
+      <object data="public/img/goose.svg" type="image/svg+xml" class="bird">
+      </object>
+    </section>
 
-  <section class="textContainer">
-    <h1>Footballers and their Birds</h1>
-    <div class="searchContainer">
-      <input id="userInput" type="text" name="search-bar" required />
-      <a id="searchButton"><img src="public/img/binoculars-512.png" alt="Click to search" name="submit" /></a>
-      <ul id="dropdownList"></ul>
-    </div>
-  </section>
-
-  <section class="bottomBirds">
-    <object data="public/img/raven.svg" type="image/svg+xml" class="raven">
-    </object>
-    <object data="public/img/goose.svg" type="image/svg+xml" class="goose">
-    </object>
-  </section>
-
-
-  <script src="public/index.js"></script>
-  <script>
-    const placeholders = [
-      "Don't be krul, I know you're a keeper!",
-      "Show us your bearded tits",
-      "He's a winger",
-      "Raheem Starling",
-      "Bobby Moorhen",
-      "He swoops, he scores",
-      "You're as bald as a coot!"
-    ];
-    const randomPlaceholder = Math.floor(Math.random() * placeholders.length);
-    document.getElementById("userInput").placeholder =
-      placeholders[randomPlaceholder];
-  </script>
-</body>
-
+    <script src="public/index.js"></script>
+    <script>
+      const placeholders = [
+        "Don't be krul, I know you're a keeper!",
+        "Show us your bearded tits",
+        "He's a winger",
+        "Raheem Starling",
+        "Bobby Moorhen",
+        "He swoops, he scores",
+        "You're as bald as a coot!"
+      ];
+      const randomPlaceholder = Math.floor(Math.random() * placeholders.length);
+      document.getElementById("userInput").placeholder =
+        placeholders[randomPlaceholder];
+    </script>
+  </body>
 </html>

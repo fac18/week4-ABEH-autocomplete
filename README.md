@@ -1,9 +1,16 @@
 # week4-ABEH-autocomplete
 Ayub, Beth, Gillian and Maria
 
+## Install
 
-##DAY 1:
-- We spent the morning deciding what kind of data we would like to search for in our input field. After much deliberation we settled on a "Footballers Wives" search which would match a footballers name with his kind of "bird".
+To install the project, follow these simple steps!
+
+1. Clone the project
+2. Run `npm install` to setup package dependencies
+
+
+## Day 1:
+- We spent the morning deciding what we kind of data we would like to search for in our input field.After much deliberation we settled on a "Footballers Wives" search which would match a footballer with his kind of "bird".
 
 - After the CORS filled delight that was API week we decided this time around, as we could actually create and manipulate our own data, to do just that! Ayub found a list of footballers and Beth created a list with her super fast touch-typing skills and used an online resource to combine the two.
 

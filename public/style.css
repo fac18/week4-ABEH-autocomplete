@@ -2,14 +2,14 @@
   /* colour variables */
   --green: #286334;
   --green-opaque: #2863380;
-  --orange: #F7C10E;
-  --orange-opaque: #F7C10E40;
-  --shamrock: #5FAD56;
-  --shamrock-opaque: #5FAD5666;
-  --cadet: #3F3F3F;
-  --cadet-opaque: #3F3F3F40;
-  --earth: #5E3023;
-  --earth-opaque: #5E302340;
+  --orange: #f7c10e;
+  --orange-opaque: #f7c10e40;
+  --shamrock: #5fad56;
+  --shamrock-opaque: #5fad5666;
+  --cadet: #3f3f3f;
+  --cadet-opaque: #3f3f3f40;
+  --earth: #5e3023;
+  --earth-opaque: #5e302340;
 }
 
 *,
@@ -29,18 +29,20 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--green);
-  font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
 }
 
 .textContainer {
   margin: 50px 200px;
+
 }
 
 #userInput {
-  margin: 2% 5%;
-  padding: 10px;
+  margin: 2% 5% 0 0;
+  padding: 8px;
   font-size: 90%;
   flex: 3;
+  width: 500px;
 }
 
 #searchButton img {
@@ -49,15 +51,20 @@ body {
   margin-top: 20px;
   flex: 1;
   transition: transform 0.3s;
+  border: 2px solid #c89b08;
+  border-radius: 10%;
 }
 
 #searchButton img:hover {
+  cursor: pointer;
   transform: rotate(360deg);
+  cursor: pointer;
 }
 
 .searchContainer {
   display: flex;
   flex-direction: row;
+  margin-bottom: 0;
 }
 
 .topBirds {
@@ -76,17 +83,24 @@ body {
   align-items: flex-end;
 }
 
-.dove {
+.bird {
   height: 170px;
 }
 
-.humming {
-  height: 170px;
-}
-.goose {
-  height: 170px;
+.dropdownList {
+  list-style: none;
+  text-align: left;
+  padding: 5px;
+  margin: 0;
+  width: 500px;
+  text: black;
 }
 
-.raven {
-  height: 170px;
+li {
+  background-color: white;
+}
+
+li:hover {
+  background-color: var(--orange);
+  color: white;
 }
