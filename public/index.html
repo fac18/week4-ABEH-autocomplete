@@ -10,16 +10,21 @@
   </head>
   <body>
     <h1>Footballers and their Birds</h1>
-    <input
-      id="userInput"
-      type="text"
-      placeholder="Don't be krul, I know you're a keeper!"
-      required
-    />
+    <input id="userInput" type="text" required />
     <a id="searchButton"
       ><img src="img/binoculars-512.png" alt="Click to search"
     /></a>
     <ul id="dropdownList"></ul>
     <script src="./index.js"></script>
+    <script>
+      const placeholders = [
+        "Don't be krul, I know you're a keeper!",
+        "Another line",
+        "And another one"
+      ];
+      const randomPlaceholder = Math.floor(Math.random() * placeholders.length);
+      document.getElementById("userInput").placeholder =
+        placeholders[randomPlaceholder];
+    </script>
   </body>
 </html>
