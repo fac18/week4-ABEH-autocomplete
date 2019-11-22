@@ -34,7 +34,6 @@ body {
 
 .textContainer {
   margin: 50px 200px;
-
 }
 
 #userInput {
@@ -101,6 +100,11 @@ li {
 }
 
 li:hover {
+  background-color: var(--orange);
+  color: white;
+}
+
+.highlighted {
   background-color: var(--orange);
   color: white;
 }
