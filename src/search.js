@@ -12,8 +12,19 @@ function shuffleArray(array) {
 shuffleArray(ballBirds);
 
 function search(str) {
+<<<<<<< HEAD
   if (!str) {
     return [];
+=======
+  let searchTerm = new RegExp(str, "i");
+  let matches = ballBirds.filter(
+    ballBird => searchTerm.test(ballBird) && str !== ballBird
+  );
+
+
+  if (matches.length < 6) {
+    return matches.sort();
+>>>>>>> master
   } else {
     let searchTerm = new RegExp(str, "i");
     // let matches = forEach.ballBirds.match();
