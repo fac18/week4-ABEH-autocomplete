@@ -1,7 +1,7 @@
 const input = document.getElementById("userInput");
 const searchButton = document.getElementById("searchButton");
 
-let newArr = [];
+let suggestionsArray = [];
 let navCounter = -1;
 
 const changeValue = () => {
@@ -11,10 +11,8 @@ const changeValue = () => {
   let searchUrl = `/search?q=${encodeURIComponent(searchTerm)}`;
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      newArr = JSON.parse(xhr.responseText);
-      console.log({
-        newArr
-      });
+      suggestionsArray = JSON.parse(xhr.responseText);
+      console.log({ newArr: suggestionsArray });
       addSuggestions();
     }
   };
@@ -31,7 +29,7 @@ const addSuggestions = () => {
     UlElement
   });
   UlElement.textContent = "";
-  newArr.forEach((suggestion, i) => {
+  suggestionsArray.forEach((suggestion, i) => {
     const liElement = document.createElement("li");
     liElement.classList.add("suggestion-item");
     const matchingText = document.createElement("span");

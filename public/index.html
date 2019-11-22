@@ -15,30 +15,28 @@
 
   <body>
     <section class="topBirds">
-      <object data="public/img/dove.svg" type="image/svg+xml" class="bird">
+      <object data="public/img/dove.svg" type="image/svg+xml" class="bird" alt="top-left">
       </object>
-      <object
-        data="public/img/hummingbird.svg"
-        type="image/svg+xml"
-        class="bird"
-      >
+      <object data="public/img/hummingbird.svg" type="image/svg+xml" class="bird" alt="top-right">
       </object>
     </section>
 
     <section class="textContainer">
       <h1>Footballers and their Birds</h1>
       <div class="searchContainer">
-        <input id="userInput" type="text" name="search-bar" required />
-        <a id="searchButton"
-          ><img
-            src="public/img/binoculars-512.png"
-            alt="Click to search"
-            name="submit"
-        /></a>
+        <input  aria-label= "user-text" id="userInput" type="text" name="search-bar" required />
+        <a  aria-label= "searching" id="searchButton">
+          <img src="public/img/binoculars-512.png" alt="Click to search" name="submit"/></a>
       </div>
       <ul class="dropdownList"></ul>
     </section>
 
+    <section class="bottomBirds">
+      <object data="public/img/raven.svg" type="image/svg+xml" class="bird" alt="bird-left"`>
+      </object>
+      <object data="public/img/goose.svg" type="image/svg+xml" class="bird" alt="bird-right">
+      </object>
+    </section>
 
     <script src="public/index.js"></script>
     <script>
@@ -55,7 +53,7 @@
       document.getElementById("userInput").placeholder =
         placeholders[randomPlaceholder];
     </script>
-    
+
     <section class="bottomBirds">
       <object data="public/img/raven.svg" type="image/svg+xml" class="bird">
       </object>
