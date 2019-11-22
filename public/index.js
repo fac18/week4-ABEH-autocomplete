@@ -12,7 +12,9 @@ const changeValue = () => {
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
       newArr = JSON.parse(xhr.responseText);
-      console.log({ newArr });
+      console.log({
+        newArr
+      });
       addSuggestions();
     }
   };
@@ -25,7 +27,9 @@ input.addEventListener("input", changeValue);
 //create li elements for each suggestion
 const addSuggestions = () => {
   const UlElement = document.querySelector(".dropdownList");
-  console.log({ UlElement });
+  console.log({
+    UlElement
+  });
   UlElement.textContent = "";
   newArr.forEach((suggestion, i) => {
     const liElement = document.createElement("li");
@@ -56,10 +60,10 @@ const chooseSuggestion = event => {
   changeValue();
 };
 
-//40 is down
-
 searchButton.addEventListener("click", () => {
-  window.location.href = "https://en.wikipedia.org/wiki/" + input.value;
+  if (input.value) {
+    window.location.href = "https://en.wikipedia.org/wiki/" + input.value;
+  }
 });
 
 input.addEventListener("keyup", function(event) {
