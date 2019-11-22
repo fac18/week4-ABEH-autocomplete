@@ -12,6 +12,10 @@ function shuffleArray(array) {
 shuffleArray(ballBirds);
 
 function search(str) {
+<<<<<<< HEAD
+  if (!str) {
+    return [];
+=======
   let searchTerm = new RegExp(str, "i");
   let matches = ballBirds.filter(
     ballBird => searchTerm.test(ballBird) && str !== ballBird
@@ -20,9 +24,19 @@ function search(str) {
 
   if (matches.length < 6) {
     return matches.sort();
+>>>>>>> master
   } else {
-    return matches.slice(0, 5).sort();
+    let searchTerm = new RegExp(str, "i");
+    // let matches = forEach.ballBirds.match();
+    let matches = ballBirds.filter(
+      ballBird => searchTerm.test(ballBird) && str !== ballBird
+    );
+
+    if (matches.length < 6) {
+      return matches.sort();
+    } else {
+      return matches.slice(0, 5).sort();
+    }
   }
 }
-
 module.exports = search;
