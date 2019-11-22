@@ -1,7 +1,7 @@
 const input = document.getElementById("userInput");
 const searchButton = document.getElementById("searchButton");
 
-let newArr = [];
+let suggestionsArray = [];
 let listPosition = -1;
 
 const changeValue = () => {
@@ -11,7 +11,7 @@ const changeValue = () => {
   let searchUrl = `/search?q=${encodeURIComponent(searchTerm)}`;
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      newArr = JSON.parse(xhr.responseText);
+      suggestionsArray = JSON.parse(xhr.responseText);
       addSuggestions();
     }
   };
@@ -25,7 +25,7 @@ input.addEventListener("input", changeValue);
 const addSuggestions = () => {
   const UlElement = document.querySelector(".dropdownList");
   UlElement.textContent = "";
-  newArr.forEach((suggestion, i) => {
+  suggestionsArray.forEach((suggestion, i) => {
     const liElement = document.createElement("li");
     liElement.textContent = suggestion;
     if (i === listPosition) {
@@ -73,7 +73,7 @@ function returnKeyPress() {
 }
 
 function downArrowPress() {
-  if (listPosition < newArr.length - 1) {
+  if (listPosition < suggestionsArray.length - 1) {
     listPosition++;
     addSuggestions();
   } else {
