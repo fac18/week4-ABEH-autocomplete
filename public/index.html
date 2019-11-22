@@ -3,8 +3,9 @@
   <head>
     <link href="public/style.css" rel="stylesheet" type="text/css" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Search engine for both footballers, and bird species"/>
     <link rel="shortcut icon" type="image/png" href="public/img/football.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Play&display=swap"
@@ -15,30 +16,41 @@
 
   <body>
     <section class="topBirds">
-      <object data="public/img/dove.svg" type="image/svg+xml" class="bird" alt="top">
+      <object
+        data="public/img/dove.svg"
+        type="image/svg+xml"
+        class="bird"
+      > image of bird
       </object>
-      <object data="public/img/hummingbird.svg" type="image/svg+xml" class="bird" alt="top">
+      <object
+        data="public/img/hummingbird.svg"
+        type="image/svg+xml"
+        class="bird"
+      > image of bird
       </object>
     </section>
 
     <section class="textContainer">
       <h1>Footballers and their Birds</h1>
       <div class="searchContainer">
-        <input  aria-label= "user-text" id="userInput" type="text" name="search-bar" required />
-        <a  aria-label= "searching" id="searchButton">
-          <img src="public/img/binoculars-512.png" alt="Click to search" name="submit"/></a>
+        <input
+          aria-label="user-text"
+          id="userInput"
+          type="text"
+          name="search-bar"
+          required
+        />
+        <a aria-label="searching" id="searchButton">
+          <img
+            src="public/img/binoculars-512.png"
+            alt="Click to search"
+            name="submit"
+        /></a>
       </div>
       <ul class="dropdownList"></ul>
     </section>
-
-    <section class="bottomBirds">
-      <object data="public/img/raven.svg" type="image/svg+xml" class="bird"> image of bird
-      </object>
-      <object data="public/img/goose.svg" type="image/svg+xml" class="bird" alt="bird">
-      </object>
-    </section>
-
-    <script src="public/index.js"></script>
+    
+     <script src="public/index.js"></script>
     <script>
       const placeholders = [
         "Don't be krul, I know you're a keeper!",
@@ -53,6 +65,15 @@
       document.getElementById("userInput").placeholder =
         placeholders[randomPlaceholder];
     </script>
+
+    <section class="bottomBirds">
+      <object data="public/img/raven.svg" type="image/svg+xml" class="bird"> image of bird
+      </object>
+      <object data="public/img/goose.svg" type="image/svg+xml" class="bird"> image of bird
+      </object>
+    </section>
+
+   
 
   </body>
 </html>
