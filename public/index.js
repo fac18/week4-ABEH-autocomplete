@@ -54,26 +54,38 @@ searchButton.addEventListener("click", () => {
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
-    if (document.querySelector(".highlighted")) {
-      input.value = document.querySelector(".highlighted").textContent;
-      input.focus();
-      changeValue();
-    } else {
-      searchButton.click();
-    }
+    returnKeyPress();
   } else if (event.keyCode === 40) {
-    if (listPosition < newArr.length - 1) {
-      listPosition++;
-      addSuggestions();
-    } else {
-      addSuggestions();
-    }
+    downArrowPress();
   } else if (event.keyCode === 38) {
-    if (listPosition > 0) {
-      listPosition--;
-      addSuggestions();
-    } else {
-      addSuggestions();
-    }
+    upArrowPress();
   }
 });
+
+function returnKeyPress() {
+  if (document.querySelector(".highlighted")) {
+    input.value = document.querySelector(".highlighted").textContent;
+    input.focus();
+    changeValue();
+  } else {
+    searchButton.click();
+  }
+}
+
+function downArrowPress() {
+  if (listPosition < newArr.length - 1) {
+    listPosition++;
+    addSuggestions();
+  } else {
+    addSuggestions();
+  }
+}
+
+function upArrowPress() {
+  if (listPosition > 0) {
+    listPosition--;
+    addSuggestions();
+  } else {
+    addSuggestions();
+  }
+}
