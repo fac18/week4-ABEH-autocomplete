@@ -13,8 +13,10 @@ shuffleArray(ballBirds);
 
 function search(str) {
   let searchTerm = new RegExp(str, "i");
-  let matches = ballBirds.filter(ballBird =>
-    searchTerm.test(ballBird));
+  let matches = ballBirds.filter(
+    ballBird => searchTerm.test(ballBird) && str !== ballBird
+  );
+
 
   if (matches.length < 6) {
     return matches.sort();
@@ -22,6 +24,5 @@ function search(str) {
     return matches.slice(0, 5).sort();
   }
 }
-
 
 module.exports = search;
